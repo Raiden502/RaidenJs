@@ -1,4 +1,4 @@
-import Paths from "./src/paths/path.js";
+import Paths from "./src/path.js";
 
 async function handleRouteChange(appElement) {
     const routes = Paths();
