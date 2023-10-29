@@ -6,7 +6,6 @@ async function handleRouteChange(appElement) {
 
     // Find the matching route
     const route = routes.find((r) => r.path === path);
-    console.log(route);
     if (route) {
         try {
             // Dynamically import and render the component
