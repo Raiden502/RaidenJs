@@ -4,15 +4,23 @@ async function handleRouteChange(appElement) {
     const routes = Paths();
     const path = window.location.pathname;
 
-    // Find the matching route
     const route = routes.find((r) => r.path === path);
     if (route) {
         try {
-            // Dynamically import and render the component
-            const componentModule = await import(route.elementPath);
-            const component = componentModule.default();
+            // Uncomment this block if you want to dynamically import components
+            // const componentModule = await import(route.elementPath);
+            // const component = componentModule.default();
+            // appElement.innerHTML = "";
+            // appElement.appendChild(component);
+
+            // Example: Create a simple JSX component
+            const element = (
+                <div>
+                    <h1>Hello, JSX!</h1>
+                </div>
+            );
             appElement.innerHTML = "";
-            appElement.appendChild(component);
+            appElement.appendChild(element);
         } catch (error) {
             console.error("Error rendering component:", error);
         }
