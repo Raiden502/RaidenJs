@@ -1,1 +1,1 @@
-Simple Sigle page static server designed with node.js
+Simple Single page static server designed with node.js
